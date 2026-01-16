@@ -44,9 +44,9 @@ function App() {
       }
 
       setCity(data.name);
-      setTemp(data.main.temp);
-      setHigh(data.main.temp_max);
-      setLow(data.main.temp_min);
+      setTemp(Math.round(data.main.temp));
+      setHigh(Math.round(data.main.temp_max));
+      setLow(Math.round(data.main.temp_min));
       setDesc(data.weather[0].description);
       setImg(
         `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`
